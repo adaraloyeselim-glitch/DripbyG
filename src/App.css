@@ -58,64 +58,79 @@
 }
 
 
-footer{
-     background: linear-gradient(to right ,rgb(24, 23, 23), rgb(141, 140, 140));
-     margin-top: 70px;   
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     gap: 20px;
-     padding: 20px;
-}
-
-.footer-cont{
-    display: flex;
-    gap: 40px;
-    font-family: arial;
-    margin-top: 30px;
-}
-
-.about-drip{
-    width: 300px;
-    color: white;
-    line-height: 40px;
-    font-family: arial;
-    font-weight: 600;
-}
-footer hr{
-    width: 70%;
-    background-color: grey;
-    border: 1px solid;
-
-}
-.about-drip h2{
-    color: orange;
-}
-
-footer p{
-    color: white;
+.site-footer{
+    margin-top: 70px;
+    padding: 48px max(22px, calc((100vw - 1180px) / 2)) 18px;
+    border-top: 3px solid #e97836;
+    background: linear-gradient(115deg, #142330, #1c2c38);
+    color: #f6f7f8;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.icons{
+.footer-cont{
+    display: grid;
+    width: 100%;
+    max-width: 1180px;
+    grid-template-columns: minmax(0, 1.6fr) repeat(2, minmax(0, 1fr));
+    gap: 52px;
+    margin: 0 auto;
+}
+
+.footer-column{
+    min-width: 0;
+    color: #cbd3d9;
+    font-size: 0.94rem;
+    line-height: 1.8;
+}
+
+.footer-column h2{
+    margin: 0 0 12px;
+    color: #fff;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.footer-brand-name{
+    margin-bottom: 9px;
+    color: #ff9a59;
+    font-size: 1.65rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.footer-socials{
     display: flex;
-    flex-direction: row;
-    gap: 20px;
+    gap: 10px;
+    margin-top: 16px;
 }
 
-.fcb{
-    font-size: 30px;
+.footer-social-icon{
+    display: grid;
+    width: 40px;
+    aspect-ratio: 1;
+    place-items: center;
+    border: 1px solid rgb(255 255 255 / 22%);
+    border-radius: 50%;
+    color: #ff9a59;
+    font-size: 18px;
 }
 
-.fcb:hover{
-    color: orange;
-    border: none;
-    transform: scale(1.3);
-    transition: 1s;
-    filter: drop-shadow(0px 0px 4px orange);
-    border-radius: 10px;
-    
+.footer-bottom{
+    display: flex;
+    max-width: 1180px;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 34px auto 0;
+    padding-top: 16px;
+    border-top: 1px solid rgb(255 255 255 / 16%);
+    color: #aeb9c1;
+    font-size: 0.8rem;
+}
+
+.footer-bottom p{
+    margin: 0;
 }
 
 .shop-head h2{
@@ -265,6 +280,160 @@ div .add-btn{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.shop-page{
+    width: min(1280px, calc(100% - 40px));
+    margin: 38px auto 72px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.shop-title{
+    margin: 0 0 26px;
+    color: #17232d;
+    font-family: monospace;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-variant: small-caps;
+}
+
+.shop-grid{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.shop-card{
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #ececec;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 3px 12px rgb(23 35 45 / 7%);
+}
+
+.shop-image{
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    padding: 8px;
+    background: #f5f5f5;
+    object-fit: contain;
+}
+
+.shop-product-details{
+    display: flex;
+    min-height: 132px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+    padding: 12px;
+}
+
+.shop-product-details h3{
+    color: #1b252d;
+    font-size: 0.98rem;
+    line-height: 1.3;
+}
+
+.shop-product-details p{
+    color: #59636a;
+    font-size: 0.92rem;
+    font-weight: 700;
+}
+
+.shop-add-button{
+    width: 100%;
+    min-height: 38px;
+    margin-top: auto;
+    border: 0;
+    border-radius: 4px;
+    background: #df6b32;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.shop-add-button:hover{
+    background: #c85520;
+}
+
+.shop-notification{
+    position: fixed;
+    top: 94px;
+    right: 22px;
+    z-index: 1100;
+    display: flex;
+    max-width: min(390px, calc(100vw - 32px));
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    border: 1px solid #c3e2d1;
+    border-radius: 6px;
+    background: #f0faf4;
+    box-shadow: 0 8px 24px rgb(20 45 33 / 16%);
+    color: #17452f;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.92rem;
+    font-weight: 700;
+    animation: shop-toast-in 180ms ease-out;
+}
+
+.shop-notification svg{
+    flex: 0 0 auto;
+    font-size: 20px;
+}
+
+@keyframes shop-toast-in{
+    from{
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 900px){
+    .shop-grid{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+    }
+}
+
+@media (max-width: 560px){
+    .shop-page{
+        width: calc(100% - 28px);
+        margin-top: 26px;
+    }
+
+    .shop-grid{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .shop-image{
+        padding: 5px;
+    }
+
+    .shop-product-details{
+        min-height: 126px;
+        padding: 10px;
+    }
+
+    .shop-notification{
+        top: 76px;
+        right: 14px;
+        left: 14px;
+        max-width: none;
+    }
+}
+
+@media (max-width: 360px){
+    .shop-grid{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
 
 .cart-container {
     display: flex;
@@ -287,22 +456,21 @@ div .add-btn{
 }
 
 .home-hero{
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 0.8fr);
     align-items: center;
     gap: 48px;
     padding: 64px max(7vw, 30px);
     background: linear-gradient(115deg, #102d47, #6aa4d4);
     color: #fff;
-    justify-content: center;
-    height: 100vh;
+    min-height: min(760px, 100vh);
 }
 
 .home-hero-copy{
-   
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center
+    align-items: flex-start;
 }
 
 .home-eyebrow{
@@ -358,9 +526,9 @@ div .add-btn{
     position: relative;
     width: min(100%, 410px);
     justify-self: center;
-    padding: 14px;
+    padding: 10px;
     border: 1px solid rgb(255 255 255 / 40%);
-    border-radius: 28px;
+    border-radius: 18px;
     background: rgb(255 255 255 / 13%);
     box-shadow: 0 24px 55px rgb(0 0 0 / 22%);
     transform: rotate(2deg);
@@ -369,8 +537,8 @@ div .add-btn{
 .home-hero-image img{
     display: block;
     width: 100%;
-    aspect-ratio: 1 / 1;
-    border-radius: 19px;
+    aspect-ratio: 4 / 3;
+    border-radius: 12px;
     object-fit: cover;
 }
 
@@ -498,12 +666,44 @@ div .add-btn{
     .home-hero{
         min-height: auto;
         grid-template-columns: 1fr;
-        gap: 36px;
-        padding: 60px 28px;
+        gap: 28px;
+        padding: 42px 22px 48px;
+        text-align: center;
+    }
+
+    .home-hero-copy{
+        align-items: center;
+    }
+
+    .home-hero h1{
+        max-width: 12ch;
+        margin: 14px 0;
+        font-size: 2.5rem;
+        letter-spacing: 0;
+        line-height: 1.08;
+    }
+
+    .home-hero-description{
+        max-width: 32rem;
+        margin-bottom: 22px;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .home-hero .home-eyebrow{
+        letter-spacing: 0;
     }
 
     .home-hero-image{
-        width: min(100%, 360px);
+        width: min(100%, 320px);
+        padding: 8px;
+        transform: none;
+    }
+
+    .home-hero-image img{
+        aspect-ratio: 1;
+        object-fit: cover;
+        object-position: center 58%;
     }
 
     .home-product-grid{
@@ -513,6 +713,22 @@ div .add-btn{
 }
 
 @media (max-width: 520px){
+    .site-footer{
+        padding: 34px 20px 16px;
+    }
+
+    .footer-cont{
+        width: min(100%, 360px);
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .footer-bottom{
+        flex-direction: column;
+        gap: 6px;
+        margin-top: 26px;
+    }
+
     .home-featured{
         width: calc(100% - 28px);
         margin: 56px auto 64px;
@@ -525,7 +741,9 @@ div .add-btn{
     }
 
     .home-product-image img{
-        aspect-ratio: 1 / 0.8;
+        aspect-ratio: 1;
+        object-fit: contain;
+        background: #f5f5f5;
     }
 }
 

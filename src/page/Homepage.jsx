@@ -19,7 +19,10 @@ function Homepage({ addToCart }) {
                     </p>
                     <Link to="/shop" className="home-shop-link">Shop the collection</Link>
                 </div>
-               
+                <div className="home-hero-image">
+                    <img src="/first.jpg" alt="White and gray sneakers from the collection" />
+                    <span>Everyday sneakers, ready for anything</span>
+                </div>
             </section>
 
             <section className="home-featured" aria-labelledby="featured-title">

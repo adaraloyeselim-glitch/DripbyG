@@ -13,6 +13,7 @@ import Footer from "./components/Footer";
 
   // Store the cart items and provide a function to update them.
   const [cart, setCart] = useState([]);
+  const cartCount = cart.reduce((count, item) => count + item.quantity, 0);
 
   // Add one product to the cart, or increase its quantity if already there.
   const addToCart = (product) => {
@@ -59,7 +60,7 @@ const clearCart = () => setCart([]);
       <div>
     
     <Router>
-      <Navbar />
+      <Navbar cartCount={cartCount} />
        
   
        <div>

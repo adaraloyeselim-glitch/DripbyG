@@ -1,6 +1,5 @@
-import {Link} from "react-router-dom"
-
 import {useState} from "react"
+import { FiCheck } from "react-icons/fi"
 // Store the products that visitors can buy in the shop.
    const products = [
     { image : "/first.jpg",
@@ -162,7 +161,7 @@ import {useState} from "react"
     // Define the shop page and accept the function that adds products to the cart.
     function Shop ({addToCart}){
     // Store the product name to display in the temporary notification.
-    const [notification , setNotification] = useState([]);
+    const [notification , setNotification] = useState(null);
 
     // Add a selected product to the cart and briefly show a confirmation.
     const handleAddToCart = (product) =>{
@@ -180,36 +179,29 @@ import {useState} from "react"
     }
     // Return the shop content inside one wrapper, including its notification and product list.
     return(
-        <div>
-            {/* Show this message only while a product name is set. */}
+        <main className="shop-page">
             {notification && (
-                <div className="shop-cont">
-                    <span>Added {notification} to cart!</span>
+            <div className="shop-notification" role="status" aria-live="polite">
+              <FiCheck aria-hidden="true" />
+              <span>Added {notification} to your cart</span>
                 </div>
             )}
-        
-       {/* Give the product list a heading. */}
-       <h2>Explore Products</h2> 
-       <div className="box-cont">
-        {products.map((product) =>(
-            <div key={product.id} className="box">
-                <img src={product.image} alt="" />
-                  <div className="text-cont">
-                   <span className="product-category">${product.price}</span>
-                   {/* Show the product name. */}
-                   <h3>{product.name}</h3>
-                   {/* Show the price with two digits after the decimal point. */}
-                   <p>${product.price.toFixed(2)}</p>
 
-                   {/* Add this product when the button is clicked. */}
-                   <div><button onClick={() => handleAddToCart(product)} className="add-btn">add to cart</button></div>
+         <h2 className="shop-title">Explore Products</h2>
+         <div className="shop-grid">
+        {products.map((product) =>(
+          <article key={product.id} className="shop-card">
+            <img className="shop-image" src={product.image} alt={product.name} loading="lazy" />
+            <div className="shop-product-details">
+                   <h3>{product.name}</h3>
+                   <p>${product.price.toFixed(2)}</p>
+               <button type="button" onClick={() => handleAddToCart(product)} className="shop-add-button">Add to cart</button>
                 </div>
-            </div>
+          </article>
         ))}
 
        </div>
-       
-        </div>
+        </main>
     )
 }
 

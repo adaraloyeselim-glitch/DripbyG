@@ -1,34 +1,34 @@
 
-import {FaFacebook, FaInstagram, FaTwitter, FaWhatsapp} from "react-icons/fa"
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa"
 
 function Footer(){
     return(
-        <div>
-               <footer>
-                <div className="footer-cont">
-                <div className="about-drip">
-                    <h2>ABOUT DRIP BY G</h2>
-                    <p>Drip by G is a modern fashion Brand offering sneakers,streetwears, and accessories. We combined comfort,class and creativity to give you the perfect look.</p>
-                </div>
-                <div className="about-drip">
-                     <h2>CONTACT INFO</h2>
-                     <p>Phone: +234 567 890 0000</p>
-                     <p>Email: example@gmail.com</p>
-                     <p>Address: Lagos, Nigeria</p>
-                </div>
-                 <div className="about-drip">
-                    <h2>FOLLOW US</h2>
-                    <div className="icons">
-                    <p><FaFacebook className="fcb" /></p>
-                    <p><FaInstagram className="fcb"/> </p>
-                    <p><FaTwitter className="fcb"/> </p>
+        <footer className="site-footer">
+            <div className="footer-cont">
+                <section className="footer-column footer-brand">
+                    <p className="footer-brand-name">Drip by G</p>
+                    <p>Everyday sneakers and streetwear, selected to make your next look an easy one.</p>
+                </section>
+                <section className="footer-column">
+                    <h2>Contact</h2>
+                    <p>Phone: +234 567 890 0000</p>
+                    <p>Email: example@gmail.com</p>
+                    <p>Lagos, Nigeria</p>
+                </section>
+                <section className="footer-column">
+                    <h2>Follow along</h2>
+                    <div className="footer-socials" aria-label="Social media">
+                        <span className="footer-social-icon" aria-label="Facebook"><FaFacebook aria-hidden="true" /></span>
+                        <span className="footer-social-icon" aria-label="Instagram"><FaInstagram aria-hidden="true" /></span>
+                        <span className="footer-social-icon" aria-label="Twitter"><FaTwitter aria-hidden="true" /></span>
                     </div>
-                </div>
-                </div>
-                <hr />
-                <p>@2026 Drip by G. All right reserve. Design with love by Debug</p>
-            </footer>
+                </section>
             </div>
+            <div className="footer-bottom">
+                <p>© 2026 Drip by G. All rights reserved.</p>
+                <p>Made for everyday moves.</p>
+            </div>
+        </footer>
     )
 }
 
