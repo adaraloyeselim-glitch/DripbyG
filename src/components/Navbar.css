@@ -1,0 +1,36 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+    font-family: arial;
+    background: linear-gradient(to right ,rgb(24, 23, 23), grey);
+    color: white;
+   
+    font-weight: bold;
+    z-index: 1000;
+}
+
+header h2{
+    font-size: 20px;
+}
+
+nav{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+nav .nav-link:hover{
+    color: orange;
+    transform: scale(1.05);
+    transition: ease, 0.4s;
+    text-shadow: 0px 0px 2px orange;
+}
