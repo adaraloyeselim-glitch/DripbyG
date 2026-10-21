@@ -27,7 +27,7 @@ function Contact(){
         </form>
        
        </div>
-       <Footer />
+       
       </div>
       
        
