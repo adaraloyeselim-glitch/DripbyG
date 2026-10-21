@@ -3,156 +3,156 @@ import {Link} from "react-router-dom"
 import {useState} from "react"
 // Store the products that visitors can buy in the shop.
    const products = [
-    { image : "first.jpg",
+    { image : "/first.jpg",
       name : "AirMax 2025",
       price : 80,
       id : 1
     },
     {
-      image : "second.jpg",
+      image : "/second.jpg",
       name : "AirMax pro",
       price : 230,
       id : 2
     },
      {
-      image : "third.jpg",
+      image : "/third.JPG",
       name : "AirMax pro",
       price : 30,
       id : 3
     },
      {
-      image : "sixth.jpg",
+      image : "/sixth.jpg",
       name : "AirMax pro",
       price : 230,
       id : 4
     },
      {
-      image : "seventh.jpg",
+      image : "/seventh.webp",
       name : "AirMax pro",
       price : 230,
       id : 5
     },
     
      {
-      image : "fourth.jpg",
+      image : "/fourth.jpg",
       name : "AirMax pro",
       price : 230,
       id : 6
     },
     
      {
-      image : "fifth.jpg",
+      image : "/fifth.jpg",
       name : "AirMax pro",
       price : 230,
       id : 7
     },
      {
-      image : "eight.jpg",
+      image : "/eight.jpg",
       name : "AirMax pro",
       price : 33,
       id : 8
     },
     {
-      image : "eigth.jpg",
+      image : "/eight.jpg",
       name : "AirMax pro",
       price : 230,
       id : 9
     },
     {
-      image : "fourth.jpg",
+      image : "/fourth.jpg",
       name : "AirMax Reloaded",
       price : 230,
       id : 10
     },
     {
-      image : "fifth.jpg",
+      image : "/fifth.jpg",
       name : "AirMax Dash",
       price : 23,
       id : 11
     },
     {
-      image : "eight.jpg",
+      image : "/eight.jpg",
       name : "AirMax pro",
       price : 230,
       id : 12
     },
     {
-      image : "fourth.jpg",
+      image : "/fourth.jpg",
       name : "AirMax pro",
       price : 230,
       id : 13
     },{
-      image : "eight.jpg",
+      image : "/eight.jpg",
       name : "AirMax pro",
       price : 230,
       id : 14
     },{
-      image : "first.jpg",
+      image : "/first.jpg",
       name : "AirMax pro",
       price : 230,
       id : 15
     },{
-      image : "second.jpg",
+      image : "/second.jpg",
       name : "AirMax pro",
       price : 30,
       id : 16
     },{
-      image : "fifth.jpg",
+      image : "/fifth.jpg",
       name : "AirMax pro",
       price : 230,
       id : 17
     },{
-      image : "third.jpg",
+      image : "/third.JPG",
       name : "AirMax pro",
       price : 230,
       id : 18
     },{
-      image : "fourth.jpg",
+      image : "/fourth.jpg",
       name : "AirMax pro",
       price : 230,
       id : 19
     },{
-      image : "eight.jpg",
+      image : "/eight.jpg",
       name : "AirMax pro",
       price : 230,
       id : 20
     },{
-      image : "second.jpg",
+      image : "/second.jpg",
       name : "AirMax pro",
       price : 230,
       id : 22
     },{
-      image : "eight.jpg",
+      image : "/eight.jpg",
       name : "AirMax pro",
       price : 30,
       id : 21
     },{
-      image : "fifth.jpg",
+      image : "/fifth.jpg",
       name : "AirMax pro",
       price : 230,
       id : 23
     },{
-      image : "eight.jpg",
+      image : "/eight.jpg",
       name : "AirMax pro",
       price : 230,
       id : 24
     },{
-      image : "eight.jpg",
+      image : "/eight.jpg",
       name : "AirMax pro",
       price : 230,
       id : 25
     },{
-      image : "eight.jpg",
+      image : "/eight.jpg",
       name : "AirMax pro",
       price : 230,
       id : 26
     },{
-      image : "eight.jpg",
+      image : "/eight.jpg",
       name : "AirMax pro",
       price : 230,
       id : 27
     },{
-      image : "eight.jpg",
+      image : "/eight.jpg",
       name : "AirMax pro",
       price : 230,
       id : 28

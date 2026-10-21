@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
 const featuredProducts = [
-    { id: 1, image: "first.jpg", name: "AirMax 2025", price: 80 },
-    { id: 2, image: "second.jpg", name: "AirMax Pro", price: 230 },
-    { id: 4, image: "sixth.jpg", name: "AirMax Pro", price: 230 },
+    { id: 1, image: "/first.jpg", name: "AirMax 2025", price: 80 },
+    { id: 2, image: "/second.jpg", name: "AirMax Pro", price: 230 },
+    { id: 4, image: "/sixth.jpg", name: "AirMax Pro", price: 230 },
 ];
 
 function Homepage({ addToCart }) {
